@@ -99,7 +99,7 @@ location.href = 'index.php';
 			$que = "SELECT * FROM  votes where user_id =".$_SESSION['login_id'];                                                                                                                                                                               
 			$del_query = $conn -> query($que);
 		
-		if (mysqli_num_rows($del_query) ==0)  :?>
+		if (mysqli_num_rows($del_query) == 0)  :?>
 			<div class="card-body">
 				<form action="" id="manage-vote">
 					<input type="hidden" name="voting_id" value="<?php echo $id ?>">

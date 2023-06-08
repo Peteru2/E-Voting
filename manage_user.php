@@ -23,13 +23,22 @@ foreach($user->fetch_array() as $k =>$v){
 			<label for="password">Password</label>
 			<input type="password" name="password" id="password" class="form-control" value="<?php echo isset($meta['password']) ? $meta['id']: '' ?>" required>
 		</div>
+		<!-- <div class="form-group">
+			<label for="password">Special Id</label>
+			<input type="text" name="sid" id="sid" class="form-control" value=" EKSU/OYO/19/<?php echo rand(100,1000) ?>" required>
+		</div> -->
 		<div class="form-group">
 			<label for="type">User Type</label>
 			<select name="type" id="type" class="custom-select">
-				<option value="1" <?php echo isset($meta['type']) && $meta['type'] == 1 ? 'selected': '' ?>>Admin</option>
-				<option value="2" <?php echo isset($meta['type']) && $meta['type'] == 2 ? 'selected': '' ?>>User</option>
+			<option value="2" <?php echo isset($meta['type']) && $meta['type'] == 2 ? 'selected': '' ?>>User</option>
+			<option value="1" <?php echo isset($meta['type']) && $meta['type'] == 1 ? 'selected': '' ?>>Admin</option>	
+
+
+			
 			</select>
 		</div>
+
+	<p>	 </p>
 	</form>
 </div>
 <script>

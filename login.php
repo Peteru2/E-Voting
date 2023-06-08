@@ -66,9 +66,12 @@ header("location:index.php?page=home");
   			<div class="logo">
   				<h1 class= "text-center">CSE Voting System</h1>
   				<img src="img.png" alt="..." width="100%">
+				
   			</div>
+			
   		</div>
-  		<div id="login-right" class="bg-success">
+		 
+  		<div id="login-right" class="bg-primary">
   			<div class="card col-md-8">
   				<div class="card-body">
   					<form id="login-form" >
@@ -80,10 +83,15 @@ header("location:index.php?page=home");
   							<label for="password" class="control-label">Password</label>
   							<input type="password" id="password" name="password" class="form-control">
   						</div>
+						  <!-- <div class="form-group">
+  							<label for="sid" class="control-label">Special Number</label>
+  							<input type="text" id="sid" name="sid" class="form-control">
+  						</div> -->
   						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Login</button></center>
   					</form>
   				</div>
   			</div>
+			  
   		</div>
    
 

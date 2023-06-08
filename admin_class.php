@@ -16,7 +16,7 @@ Class Action {
 
 	function login(){
 		extract($_POST);
-		$qry = $this->db->query("SELECT * FROM users where username = '".$username."' and password = '".$password."' ");
+		$qry = $this->db->query(" SELECT * FROM users where username = '".$username."' and password = '".$password."'" );
 		if($qry->num_rows > 0){
 			foreach ($qry->fetch_array() as $key => $value) {
 				if($key != 'passwors' && !is_numeric($key))
@@ -29,6 +29,7 @@ Class Action {
 		}else{
 			return 3;
 		}
+		
 	}
 	function logout(){
 		session_destroy();
@@ -87,6 +88,8 @@ Class Action {
 		$data = " name = '$name' ";
 		$data .= ", username = '$username' ";
 		$data .= ", password = '$password' ";
+		// $data .= ", sid = '$sid' ";
+
 		$data .= ", type = '$type' ";
 		if(empty($id)){
 			$save = $this->db->query("INSERT INTO users set ".$data);
